@@ -17,21 +17,43 @@
   </header>
 
   <md-content flex layout="column" class="dr-div" layout-align="center center">
-        <h1 class=".md-display-4">Upload patient data</h1>
-            <md-input-container>
-                <label>Name</label>
-                <input>
-            </md-input-container>
-            <md-input-container>
-                <label>Gender</label>
-                <input>
-            </md-input-container>
-            <md-input-container>
-                <label>Ethnicity</label>
-                <input>
-            </md-input-container>
-            <md-input-container>
-                <label>Cancer type</label>
-                <input>
-            </md-input-container>
+        <h1 class="md-display-2">Upload patient data</h1>
+        <div layout="row" layout-fill layout-padding style="max-width:800px;">
+            <div flex="50">
+              <md-input-container>
+                  <label>Name</label>
+                  <input>
+              </md-input-container>
+              <md-input-container>
+                  <label>Gender</label>
+                  <input>
+              </md-input-container>
+              <md-input-container>
+                  <label>Ethnicity</label>
+                  <input>
+              </md-input-container>
+              <md-input-container>
+                  <label>Cancer type</label>
+                  <input>
+              </md-input-container>
+            </div>
+            <div flex="50">
+              <md-input-container>
+                  <label>Expectancy</label>
+                  <input>
+              </md-input-container>
+              <md-input-container>
+                  <label>Treatment</label>
+                  <input>
+              </md-input-container>
+              <md-input-container>
+             <label>Cancer type</label>
+             <md-select ng-model="patient.cancerType">
+               <md-option ng-repeat="cancer in cancer_types" value="{{cancer}}">
+                 {{cancer}}
+               </md-option>
+             </md-select>
+           </md-input-container>
+            </div>
+          </div>
   </md-content>
