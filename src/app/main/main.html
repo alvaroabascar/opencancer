@@ -18,16 +18,33 @@
     <header>
         <acme-navbar></acme-navbar>
     </header>
-
-    <div layout="row" flex layout-fill>
+    <div layout="row" layout-fill>
         <div flex flex="50" class="dr-side" layout-align="center center" layout="row">
             <div flex="30">
                 <h1 class=".md-display-3">I'm a doctor</h1>
+                <md-input-container>
+                  <label>User</label>
+                  <input ng-model="user.title">
+                </md-input-container>
+                <md-input-container>
+                  <label>Password</label>
+                  <input ng-model="user.title">
+                </md-input-container>
+                <md-button class="md-raised">Login</md-button>
             </div>
         </div>
         <div flex flex="50" class="patient-side" layout-align="center center" layout="row">
             <div flex="40">
                 <h1 class=".md-display-3">I'm a patient</h1>
+                <md-input-container>
+                  <label>User</label>
+                  <input ng-model="user.title">
+                </md-input-container>
+                <md-input-container>
+                  <label>Password</label>
+                  <input ng-model="user.title">
+                </md-input-container>
+                <md-button class="md-raised">Login</md-button>
             </div>
         </div>
     </div>
