@@ -25,7 +25,7 @@
             <img class="avatar md-avatar" src="/assets/images/{{patient.female ? 'female' : 'male'}}-icon.jpg" style="opacity: 0.7">
             <span flex="10">{{patient.name}}</span>
             <span flex="20">{{patient.cancer}}</span>
-            <md-button class="md-raised patient-button">Display data</md-button>
+            <md-button class="md-raised patient-button" ng-click="go('/dr-viewdata/')">Display data</md-button>
         </md-list-item>
     </md-list>
     </md-content>
