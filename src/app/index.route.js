@@ -17,7 +17,7 @@
           controller: 'DrController',
           controllerAs: 'dr'
       })
-      .when('/dr/', {
+      .when('/dr-upload/', {
           templateUrl: 'app/dr-upload/dr-upload.html',
           controller: 'DrUploadController',
           controllerAs: 'drupload'
