@@ -6,7 +6,7 @@
     .controller('DrViewDataController', DrViewDataController);
 
   /** @ngInject */
-  function DrViewDataController(patientDataService) {
+  function DrViewDataController($scope, patientDataService) {
     var vm = this;
     $scope.patient_dat = patientDataService;
   }
