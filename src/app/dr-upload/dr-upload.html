@@ -16,13 +16,24 @@
         <acme-navbar></acme-navbar>
     </header>
 
-    <div layout="column" class="dr-div" flex layout-align="center center">
-        <div flex="50">
-            <h1 class=".md-display-4">Do you want to upload or retrieve data?</h1>
-        </div>
-        <div flex="50" layout="row" flex class="btn-holder">
-            <md-button class="md-raised">Upload data</md-button>
-            <md-button class="md-raised">Retrieve data</md-button>
+    <div layout="column" class="dr-div" layout-align="center center">
+        <h1 class=".md-display-4">Upload patient data</h1>
+            <md-input-container>
+                <label>Name</label>
+                <input>
+            </md-input-container>
+            <md-input-container>
+                <label>Gender</label>
+                <input>
+            </md-input-container>
+            <md-input-container>
+                <label>Ethnicity</label>
+                <input>
+            </md-input-container>
+            <md-input-container>
+                <label>Cancer type</label>
+                <input>
+            </md-input-container>
         </div>
     </div>
   </md-content>
