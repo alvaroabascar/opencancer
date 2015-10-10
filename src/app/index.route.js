@@ -17,6 +17,11 @@
           controller: 'DrController',
           controllerAs: 'dr'
       })
+      .when('/dr/', {
+          templateUrl: 'app/dr-upload/dr-upload.html',
+          controller: 'DrUploadController',
+          controllerAs: 'drupload'
+      })
       .otherwise({
         redirectTo: '/'
       });
