@@ -1,0 +1,36 @@
+<style>
+
+</style>
+    <header>
+        <acme-navbar></acme-navbar>
+    </header>
+    <md-content layout="row" flex layout-fill>
+          <div flex flex="50" class="dr-side" layout-align="center center" layout="row">
+              <div flex="60">
+                  <h1 class="md-display-2">I'm a doctor</h1>
+                  <md-input-container>
+                    <label>User</label>
+                    <input ng-model="user.title">
+                  </md-input-container>
+                  <md-input-container>
+                    <label>Password</label>
+                    <input ng-model="user.title">
+                  </md-input-container>
+                  <md-button class="md-raised" ng-click="go('/dr');">Login</md-button>
+              </div>
+          </div>
+          <div flex flex="50" class="patient-side" layout-align="center center" layout="row">
+              <div flex="60">
+                  <h1 class="md-display-2">I'm a patient</h1>
+                  <md-input-container>
+                    <label>User</label>
+                    <input ng-model="user.title">
+                  </md-input-container>
+                  <md-input-container>
+                    <label>Password</label>
+                    <input ng-model="user.title">
+                  </md-input-container>
+                  <md-button class="md-raised">Login</md-button>
+              </div>
+          </div>
+  </md-content>
