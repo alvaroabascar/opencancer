@@ -64,89 +64,68 @@
   </header>
 
   <md-content flex layout="column" class="dr-div" layout-align="center center">
-    <h1 class=".md-display-1">Amy's data</h1>
+  <h1 class=".md-display-1">{{patient_data.name}}'s data</h1>
     <div layout="row">
       <div layout="column">
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Name: Amy Dale</h2>
+            <h2 class="plainWhiteTextBoxText">Name: {{patient_data.name}}</h2>
         </div>
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Gender: female</h2>
+            <h2 class="plainWhiteTextBoxText">Gender: {{patient_data.female ? "female" : "male"}}</h2>
         </div>
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Ethnicity: British</h2>
+            <h2 class="plainWhiteTextBoxText">Ethnicity: {{patient_data.ethnicity}}</h2>
         </div>
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Weight: 50kg</h2>
+            <h2 class="plainWhiteTextBoxText">Weight: {{patient_data.weight}} kg</h2>
         </div>
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Height: 157 cm</h2>
+            <h2 class="plainWhiteTextBoxText">Height: {{patient_data.height}} cm</h2>
         </div>
         <div class="plainWhiteTextBox">
-          <h2 class="plainWhiteTextBoxText">Blood type: A</h2>
+            <h2 class="plainWhiteTextBoxText">Blood type: {{patient_data.blood_type}}</h2>
         </div>
       </div>
       <div layout="column">
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Drug resistance</h2>
-          <div class = "smallGreenBox">
-            <h2>Drug A</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Drug B</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Drug C</h2>
+          <div class="smallGreenBox" ng-repeat="resistance in patient_data.drug_resistance">
+              <h2>{{resistance}}</h2>
           </div>
         </div>
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Survival rate</h2>
           <div id="circle">
-            <h2 id = "circleText">70%</h2>
+              <h2 id="circleText">{{patient_data.survival_rate}}%</h2>
           </div>
         </div>
       </div>
       <div layout="column">
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Symptoms</h2>
-          <div class = "smallGreenBox">
-            <h2>Symptom A</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Symptom B</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Symptom C</h2>
+          <div class="smallGreenBox" ng-repeat="symptom in patient_data.symptoms">
+              <h2>{{symptom}}</h2>
           </div>
         </div>
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Side effects</h2>
-          <div class = "smallGreenBox">
-            <h2>Side effect A</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Side effect B</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Side effect C</h2>
+          <div class="smallGreenBox" ng-repeat="effect in patient_data.side_effects">
+              <h2>{{effect}}</h2>
           </div>
         </div>
       </div>
       <div layout="column">
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Possible treatment</h2>
-          <div class = "smallGreenBox">
-            <h2>Treatment A</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Treatment B</h2>
-          </div>
-          <div class = "smallGreenBox">
-            <h2>Treatment C</h2>
+          <div class="smallGreenBox" ng-repeat="treatment in patient_data.possible_treatment">
+              <h2>{{treatment}}</h2>
           </div>
         </div>
-        <div class = "largeWhiteBox">
+        <div class="largeWhiteBox">
           <h2 class="plainWhiteTextBoxText">Mutation data</h2>
+          <div class="smallGreenBox">Gene: {{patient_data.mutation_data.gene}}</div>
+          <div class="smallGreenBox">Position: {{patient_data.mutation_data.position}}</div>
+          <div class="smallGreenBox">Type: {{patient_data.mutation_data.type_of_mutation}}</div>
         </div>
       </div>
     </div>

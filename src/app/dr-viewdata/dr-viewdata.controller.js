@@ -8,6 +8,6 @@
   /** @ngInject */
   function DrViewDataController($scope, patientDataService) {
     var vm = this;
-    $scope.patient_dat = patientDataService;
+    $scope.patient_data = patientDataService;
   }
 })();
