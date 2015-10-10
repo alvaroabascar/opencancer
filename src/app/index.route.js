@@ -22,6 +22,11 @@
           controller: 'DrUploadController',
           controllerAs: 'drupload'
       })
+      .when('/dr-viewdata/', {
+        templateUrl: 'app/dr-viewdata/dr-viewdata.html',
+        controller: 'DrViewDataController',
+        controllerAs: 'drviewdata'
+      })
       .when('/dr-patients/', {
           templateUrl: 'app/dr-patients/dr-patients.html',
           controller: 'DrPatientsController',
