@@ -22,6 +22,11 @@
           controller: 'DrUploadController',
           controllerAs: 'drupload'
       })
+      .when('/dr-patients/', {
+          templateUrl: 'app/dr-patients/dr-patients.html',
+          controller: 'DrPatientsController',
+          controllerAs: 'drpatients'
+      })
       .otherwise({
         redirectTo: '/'
       });
