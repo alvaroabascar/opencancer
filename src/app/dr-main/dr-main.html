@@ -4,27 +4,21 @@
         color: #FEFDFE;
     }
     .btn-holder .md-button {
-        width: 200px;
+        min-width: 200px;
         margin: 30px;
+        width: 50%:
+        max-width: 600px;
     }
 </style>
-
-<div layout="vertical" layout-fill>
-
-  <md-content flex>
     <header>
         <acme-navbar></acme-navbar>
     </header>
-
-    <div layout="column" class="dr-div" flex layout-align="center center">
+    <md-content class="dr-div" layout="column" flex layout-fill layout-align="center center">
         <div flex="50">
-            <h1 class=".md-display-4">Do you want to upload or retrieve data?</h1>
+            <h1 class="md-display-2">Do you want to upload or retrieve data?</h1>
         </div>
         <div flex="50" layout="row" flex class="btn-holder">
             <md-button class="md-raised" ng-click="go('/dr-upload');">Upload data</md-button>
             <md-button class="md-raised">Retrieve data</md-button>
         </div>
-    </div>
   </md-content>
-
-</div>
