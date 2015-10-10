@@ -1,3 +1,13 @@
+<style>
+    .dr-side {
+        background-color: #34A651;
+    }
+    .patient-side {
+        background-color: #EDC726;
+    }
+
+</style>
+
 <div layout="vertical" layout-fill>
 
   <md-content>
@@ -6,8 +16,12 @@
     </header>
 
     <div layout="row" flex>
-        <div flex="50">Left</div>
-        <div flex="50">Right</div>
+        <div flex="50" class="dr-side">
+            <h1 class=".md-display-3">I'm a doctor</h1>
+        </div>
+        <div flex="50" class="patient-side">
+            <h1 class=".md-display-3">I'm a patient</h1>
+        </div>
     </div>
     <!--
     <section class="jumbotron">
