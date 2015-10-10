@@ -1,0 +1,30 @@
+<style>
+    .dr-div {
+        background-color: #34A651;
+        color: #FEFDFE;
+    }
+    .btn-holder .md-button {
+        width: 200px;
+        margin: 30px;
+    }
+</style>
+
+<div layout="vertical" layout-fill>
+
+  <md-content flex>
+    <header>
+        <acme-navbar></acme-navbar>
+    </header>
+
+    <div layout="column" class="dr-div" flex layout-align="center center">
+        <div flex="50">
+            <h1 class=".md-display-4">Do you want to upload or retrieve data?</h1>
+        </div>
+        <div flex="50" layout="row" flex class="btn-holder">
+            <md-button class="md-raised">Upload data</md-button>
+            <md-button class="md-raised">Retrieve data</md-button>
+        </div>
+    </div>
+  </md-content>
+
+</div>
