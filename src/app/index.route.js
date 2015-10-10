@@ -22,6 +22,11 @@
           controller: 'DrUploadController',
           controllerAs: 'drupload'
       })
+      .when('/dr-viewdata/', {
+        templateUrl: 'app/dr-viewdata/dr-viewdata.html',
+        controller: 'DrViewDataController',
+        controllerAs: 'drviewdata'
+      })
       .otherwise({
         redirectTo: '/'
       });
