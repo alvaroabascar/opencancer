@@ -32,6 +32,11 @@
           controller: 'DrPatientsController',
           controllerAs: 'drpatients'
       })
+      .when('/dr-treatment/', {
+        templateUrl: 'app/dr-treatment/dr-treatment.html',
+        controller: 'DrTreatmentController',
+        controllerAs: 'treatctrl'
+      })
       .when('/patient/', {
         templateUrl: 'app/patient-main/patient-main.html',
         controller: 'DrPatientsController',

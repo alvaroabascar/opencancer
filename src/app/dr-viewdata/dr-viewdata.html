@@ -19,6 +19,8 @@
       height: auto;
       width: 250px;
       line-height: 50px;
+      border-radius: 5px;
+      padding: 3px;
     }
     .plainWhiteTextBoxText{
       color: #888888;
@@ -30,6 +32,8 @@
       width: 300px;
       margin: 5px 5px 5px 5px;
       background-color: #FFFFFF;
+      border-radius: 5px;
+      padding: 3px;
     }
     .smallGreenBox{
       height: 50px;
@@ -38,6 +42,8 @@
       margin-left: auto;
       margin-right: auto;
       background-color: #34A651;
+      border-radius: 5px;
+      padding: 1px;
     }
     #circle {
       width: 100px;
@@ -85,6 +91,7 @@
         <div class="plainWhiteTextBox">
             <h2 class="plainWhiteTextBoxText">Blood type: {{patient_data.blood_type}}</h2>
         </div>
+        <md-button class="md-raised md-primary" ng-click="go('/dr-treatment/');">Treatment plan</md-button>
       </div>
       <div layout="column">
         <div class="largeWhiteBox">

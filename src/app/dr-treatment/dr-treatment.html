@@ -1,0 +1,74 @@
+<style>
+    .dr-div {
+        background-color: #34A651;
+        color: #FEFDFE;
+    }
+    .btn-holder .md-button {
+        min-width: 200px;
+        margin: 30px;
+        width: 50%:
+        max-width: 600px;
+    }
+    #not-surviving-box {
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        display: none;
+    }
+    #surviving-box {
+        position: absolute;
+        left: 10px;
+        bottom: 100px;
+        display: none;
+    }
+    #myChart {
+        cursor: pointer;
+    }
+    md-card {
+        padding-left: 1%;
+        color: #333;
+        height: 40%;
+        width: 35%;
+    }
+    #suggestion {
+        position: absolute;
+        bottom: 1px;
+        left: 25%;
+        width: 50%;
+        height: 8%;
+        padding: 1%;
+    }
+    .infoicon {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        float: right;
+    }
+</style>
+<header>
+    <acme-navbar></acme-navbar>
+</header>
+<md-content class="dr-div" layout="column" flex layout-fill layout-align="start center">
+    <h1 class="md-display-2" style="margin-bottom: 0px;">Patient statistics</h1>
+    <h1 class="md-display-1" style="margin-top: 0px;">Survival rate: 70%</h1>
+    <canvas id="myChart" width="300" height="300"></canvas>
+    <md-card id="not-surviving-box" class="card">
+        <h3>Not surviving</h3>
+        <md-list>
+            <md-list-item><b>Age:</b>&nbsp;&nbsp; 63.2</md-list-item>
+            <md-list-item><b>Stage at diagnosis:</b>&nbsp;&nbsp; 25% T1, 35% T2 22% T3 18% T4</md-list-item>
+            <md-list-item><b>Treatment:</b>&nbsp;&nbsp; Cisplatin, capecitabine and trastuzumab</md-list-item>
+        </md-list>
+    </md-card>
+    <md-card id="surviving-box" class="card">
+    <h3>Surviving</h3>
+    <md-list>
+             <md-list-item><b>Age:</b>&nbsp;&nbsp; 53.8</md-list-item>
+            <md-list-item><b>Stage at diagnosis:</b>&nbsp;&nbsp; 53% T1, 27% T2 15% T3 5% T4</md-list-item>
+            <md-list-item><b>Treatment:</b>&nbsp;&nbsp; Cisplatin and topotecan chemotherapy</md-list-item>
+    </md-list>
+    </md-card>
+    <md-card id="suggestion">
+    <span>Suggested treatment:<b> Cisplatin and topotecan chemotherapy</b><img src="/assets/images/info-icon.png" class="infoicon"></span>
+    </md-card>
+</md-content>
