@@ -7,7 +7,7 @@
   }
 
   .dr-div h2 {
-    color: xgray;
+    color: gray;
   }
 
     </style>
@@ -16,30 +16,45 @@
   </header>
   <md-content flex layout="column" class="dr-div" layout-align="start center">
   <h1 class="md-display-1">{{patient_data.name}}'s data</h1>
-  <md-content class="md-padding">
-  <md-tabs md-dynamic-height md-border-bottom style="max-width:600px;">
-    <md-tab label="Genetic profile">
-      <md-content class="md-padding">
-        <h2 class="md-display-2">Genetic profile</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
-      </md-content>
-    </md-tab>
-    <md-tab label="two">
-      <md-content class="md-padding">
-        <h2 class="md-display-2">Tab Two</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
-        <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-      </md-content>
-    </md-tab>
-    <md-tab label="three">
-      <md-content class="md-padding">
-        <h2 class="md-display-2">Tab Three</h2>
-        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-      </md-content>
-    </md-tab>
-  </md-tabs>
-</md-content>
+  <md-content class="md-padding" style="margin-bottom: 40px">
+    <md-tabs md-dynamic-height md-border-bottom style="max-width:600px; min-width:600px;">
+      <md-tab label="Genetic profile">
+        <md-content class="md-padding">
+          <h2 class="md-display-2">Genetic profile</h2>
+          <img src="assets/images/genes.png" style="width:100%;">
+          <md-button class="md-raised" ng-click="go('/dr-treatment/')">
+            Treatment options
+          </md-button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Metadata">
+        <md-content class="md-padding">
+          <h2 class="md-display-2">Metadata</h2>
+          <ul>
+            <li>
+              ID: <b>123456784321</b>
+            </li>
+            <li>
+              Family history: <b>Mother BRCA1 breast cancer</b>
+            </li>
+            <li>
+              Sign &amp; Synptoms:
+              <md-chips>
+                <md-chip>cough</md-chip>
+                <md-chip>fatigue</md-chip>
+                <md-chip>shortness of breath</md-chip>
+                <md-chip>chest pain</md-chip>
+                <md-chip>weight loss</md-chip>
+                <md-chip>supraclavicular lymph nodes +++</md-chip>
+              </md-chips>
+            </li>
+          </ul>
+        </md-content>
+      </md-tab>
+    
+    </md-tabs>
+  </md-content>
     <div id="svgHolder"></div>
     <script language="javascript" src="http://www.biodalliance.org/release-0.11/dalliance-compiled.js"></script>
   </md-content>
