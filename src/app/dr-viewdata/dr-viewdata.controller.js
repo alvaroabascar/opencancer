@@ -5,6 +5,7 @@
     .module('opencancerWeb')
     .controller('DrViewDataController', DrViewDataController);
 
+
   /** @ngInject */
   function DrViewDataController($scope, drDataService) {
     var vm = this;
