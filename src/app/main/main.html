@@ -26,11 +26,11 @@
                   <h1 class="md-display-2">I'm a doctor</h1>
                   <md-input-container>
                     <label>User</label>
-                    <input ng-model="user.title">
+                    <input ng-model="user.druser">
                   </md-input-container>
                   <md-input-container>
                     <label>Password</label>
-                    <input ng-model="user.title">
+                    <input type="password" ng-model="user.drpass">
                   </md-input-container>
                   <md-button class="md-raised" ng-click="go('/dr');">Login</md-button>
               </div>
@@ -40,11 +40,11 @@
                   <h1 class="md-display-2">I'm a patient</h1>
                   <md-input-container>
                     <label>User</label>
-                    <input ng-model="user.title">
+                    <input ng-model="user.ptuser">
                   </md-input-container>
                   <md-input-container>
                     <label>Password</label>
-                    <input ng-model="user.title">
+                    <input type="password" ng-model="user.ptpass">
                   </md-input-container>
                   <md-button class="md-raised" ng-click="go('/patient');">Login</md-button>
               </div>

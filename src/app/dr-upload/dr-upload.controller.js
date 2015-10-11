@@ -193,8 +193,14 @@
   "Wilms Tumor"]
 
   /** @ngInject */
-  function DrUploadController($scope) {
+  function DrUploadController($scope, $location) {
     var vm = this;
     $scope.cancer_types = cancers;
+    $scope.go = function ( path ) {
+        $location.path(path);
+    }
   }
+
+
+
 })();

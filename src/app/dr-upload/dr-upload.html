@@ -47,13 +47,18 @@
                   <input>
               </md-input-container>
               <md-input-container>
-             <label>Cancer type</label>
-             <md-select ng-model="patient.cancerType">
-               <md-option ng-repeat="cancer in cancer_types" value="{{cancer}}">
-                 {{cancer}}
-               </md-option>
-             </md-select>
-           </md-input-container>
+                 <md-select placeholder="Type of Cancer" ng-model="patient.cancerType">
+                   <md-option ng-repeat="cancer in cancer_types" value="{{cancer}}">
+                     {{cancer}}
+                   </md-option>
+                 </md-select>
+               </md-input-container>
+               <md-button class="md-raised md-primary" ng-click="showAlert($event)">Upload data</md-button>
+               <div flex layout="row" layout-align="end center">
+                 <md-button class="md-raised"  ng-click="go('/dr-viewdata')">Submit</md-button>
+               </div>
+
+
             </div>
           </div>
   </md-content>
