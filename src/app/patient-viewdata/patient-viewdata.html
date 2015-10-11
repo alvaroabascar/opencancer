@@ -59,6 +59,10 @@
     #circleText {
       text-align: center;
     }
+    #infographicTwo {
+      margin-left: auto;
+      margin-right: auto;
+    }
 </style>
 
 
@@ -74,90 +78,88 @@
       <md-tab label="Summary">
         <md-content class="md-padding">
           <h1 class="md-display-2">Your data summarised</h1>
-          <p></p>
-          <img src = "../assets/images/"/>
-          <canvas id="doughnut" class="chart chart-doughnut"
-                  chart-data="data" chart-labels="labels"/>
+          <img src = "../assets/images/infographicOne.png" height="200" width = "550"/>
+          <p> Your data suggests that your survival chances are better than 68% of the population.</p>
+          <img src = "../assets/images/infographicTwo.png" id = "infographicTwo" height="200" width = "200"/>
+          <img src = "../assets/images/infographicTwo.png" id = "infographicThree" height="200" width = "200"/>
+          <p> The biggest contributor to this risk level is your age. The greatest preventable factor is your smoking habit.</p>
         </md-content>
       </md-tab>
       <md-tab label="Meta">
         <md-content class="md-padding">
-          <h1 class="md-display-2">Metadata</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
-          <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-        </md-content>
+          <h1 class=".md-display-1">{{patient_data.name}}'s data</h1>
+          <div layout="row">
+            <div layout="column">
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Name: {{patient_data.name}}</h2>
+              </div>
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Gender: {{patient_data.female ? "female" : "male"}}</h2>
+              </div>
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Ethnicity: {{patient_data.ethnicity}}</h2>
+              </div>
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Weight: {{patient_data.weight}} kg</h2>
+              </div>
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Height: {{patient_data.height}} cm</h2>
+              </div>
+              <div class="plainWhiteTextBox">
+                <h2 class="plainWhiteTextBoxText">Blood type: {{patient_data.blood_type}}</h2>
+              </div>
+            </div>
+            <div layout="column">
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Drug resistance</h2>
+                <div class="smallGreenBox" ng-repeat="resistance in patient_data.drug_resistance">
+                  <h2>{{resistance}}</h2>
+                </div>
+              </div>
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Survival rate</h2>
+                <div id="circle">
+                  <h2 id="circleText">{{patient_data.survival_rate}}%</h2>
+                </div>
+              </div>
+            </div>
+            <div layout="column">
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Symptoms</h2>
+                <div class="smallGreenBox" ng-repeat="symptom in patient_data.symptoms">
+                  <h2>{{symptom}}</h2>
+                </div>
+              </div>
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Side effects</h2>
+                <div class="smallGreenBox" ng-repeat="effect in patient_data.side_effects">
+                  <h2>{{effect}}</h2>
+                </div>
+              </div>
+            </div>
+            <div layout="column">
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Possible treatment</h2>
+                <div class="smallGreenBox" ng-repeat="treatment in patient_data.possible_treatment">
+                  <h2>{{treatment}}</h2>
+                </div>
+              </div>
+              <div class="largeWhiteBox">
+                <h2 class="plainWhiteTextBoxText">Mutation data</h2>
+                <div class="smallGreenBox">Gene: {{patient_data.mutation_data.gene}}</div>
+                <div class="smallGreenBox">Position: {{patient_data.mutation_data.position}}</div>
+                <div class="smallGreenBox">Type: {{patient_data.mutation_data.type_of_mutation}}</div>
+              </div>
+            </div>
+          </div>
+          </md-content>
       </md-tab>
       <md-tab label="Genome">
         <md-content class="md-padding">
           <h1 class="md-display-2">Genome</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+          <p></p>
         </md-content>
       </md-tab>
     </md-tabs>
-  <!--<h1 class=".md-display-1">{{patient_data.name}}'s data</h1>-->
-    <!--<div layout="row">-->
-      <!--<div layout="column">-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Name: {{patient_data.name}}</h2>-->
-        <!--</div>-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Gender: {{patient_data.female ? "female" : "male"}}</h2>-->
-        <!--</div>-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Ethnicity: {{patient_data.ethnicity}}</h2>-->
-        <!--</div>-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Weight: {{patient_data.weight}} kg</h2>-->
-        <!--</div>-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Height: {{patient_data.height}} cm</h2>-->
-        <!--</div>-->
-        <!--<div class="plainWhiteTextBox">-->
-            <!--<h2 class="plainWhiteTextBoxText">Blood type: {{patient_data.blood_type}}</h2>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div layout="column">-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Drug resistance</h2>-->
-          <!--<div class="smallGreenBox" ng-repeat="resistance in patient_data.drug_resistance">-->
-              <!--<h2>{{resistance}}</h2>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Survival rate</h2>-->
-          <!--<div id="circle">-->
-              <!--<h2 id="circleText">{{patient_data.survival_rate}}%</h2>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div layout="column">-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Symptoms</h2>-->
-          <!--<div class="smallGreenBox" ng-repeat="symptom in patient_data.symptoms">-->
-              <!--<h2>{{symptom}}</h2>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Side effects</h2>-->
-          <!--<div class="smallGreenBox" ng-repeat="effect in patient_data.side_effects">-->
-              <!--<h2>{{effect}}</h2>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div layout="column">-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Possible treatment</h2>-->
-          <!--<div class="smallGreenBox" ng-repeat="treatment in patient_data.possible_treatment">-->
-              <!--<h2>{{treatment}}</h2>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="largeWhiteBox">-->
-          <!--<h2 class="plainWhiteTextBoxText">Mutation data</h2>-->
-          <!--<div class="smallGreenBox">Gene: {{patient_data.mutation_data.gene}}</div>-->
-          <!--<div class="smallGreenBox">Position: {{patient_data.mutation_data.position}}</div>-->
-          <!--<div class="smallGreenBox">Type: {{patient_data.mutation_data.type_of_mutation}}</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+
   </md-content>
