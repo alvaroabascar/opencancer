@@ -41,19 +41,21 @@
               <md-input-container>
                   <label>Expectancy</label>
                   <input>
-              </md-input-container>
-              <md-input-container>
-                  <label>Treatment</label>
-                  <input type="file">
-              </md-input-container>
-              <md-input-container>
              <label>Cancer type</label>
-             <md-select ng-model="patient.cancerType">
-               <md-option ng-repeat="cancer in cancer_types" value="{{cancer}}">
-                 {{cancer}}
-               </md-option>
-             </md-select>
+                <md-input-container>
+                  <md-select placeholder="Type of Cancer" ng-model="patient.cancerType">
+                    <md-option ng-repeat="cancer in cancer_types" value="{{cancer}}">
+                      {{cancer}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
            </md-input-container>
+              <md-button class="md-raised md-primary" ng-click="showAlert($event)">Upload data</md-button>
+              <md-button class="md-raised md-primary" ng-click="showAlert($event)">Add Treatment plan</md-button>
+              <div flex layout="row" layout-align="end center">
+                <md-button class="md-raised" ng-click="go('/patient-viewdata')">Submit</md-button>
+              </div>
             </div>
           </div>
   </md-content>

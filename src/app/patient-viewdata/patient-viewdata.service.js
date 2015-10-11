@@ -15,7 +15,7 @@
             drug_resistance: ["Amsidine", "Bendamustine", "Bleomycin"],
             survival_rate: "70",
             symptoms: ["Headache", "Gastritis"],
-            possible_treatment: ["Cisplatin, capecitabine and trastuzumab", "Cisplatin and topotecan chemotherapy"],
+            possible_treatment: ["Cisplatin", "Capecitabine"],
             side_effects: ["Dizziness", "Loss of sensitivity"],
             mutation_data: {gene: "lpx1",
                             type_of_mutation: "missense",

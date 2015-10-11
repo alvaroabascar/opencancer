@@ -59,9 +59,16 @@
     #circleText {
       text-align: center;
     }
+    #infographicOne {
+      margin-left: 200px;
+    }
     #infographicTwo {
-      margin-left: 50px;
+      margin-left: 250px;
       margin-right: 50px;
+    }
+    #infographicThree {
+      float:right;
+      margin-right: 250px;
     }
 </style>
 
@@ -74,12 +81,12 @@
   <md-content flex layout="column" class="dr-div" layout-align="start center">
   <h1 class=".md-display-1">{{patient_data.name}}'s data</h1>
   <md-content class="md-padding">
-    <md-tabs md-dynamic-height md-border-bottom style="max-width:600px;">
+    <md-tabs md-dynamic-height md-border-bottom style="max-width:1200px;">
       <md-tab label="Summary">
         <md-content class="md-padding">
           <h1 class="md-display-2">Your data summarised</h1>
-          <img src = "../assets/images/infographicOne.png" height="200" width = "550"/>
-          <p> Your data suggests that your survival chances are better than 68% of the population.</p>
+          <img src = "../assets/images/infographicOne.png" id = "infographicOne" height="200" width = "550"/>
+          <p> Your data suggests that at 55%, your survival chances are better than 68% of the population with your cancer.</p>
           <img src = "../assets/images/infographicTwo.png" id = "infographicTwo" height="200" width = "200"/>
           <img src = "../assets/images/infographicThree.png" id = "infographicThree" height="200" width = "200"/>
           <p> The biggest contributor to this risk level is your age. The greatest preventable factor is your smoking habit.</p>
@@ -153,12 +160,6 @@
             </div>
           </div>
           </md-content>
-      </md-tab>
-      <md-tab label="Genome">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Genome</h1>
-          <p></p>
-        </md-content>
       </md-tab>
     </md-tabs>
 
