@@ -1,0 +1,132 @@
+<style>
+    h1{
+      margin: 0 0 0 0;
+    }
+    h2{
+      margin: 0 0 0 0;
+    }
+    .dr-div {
+        background-color: #EDC726;
+        color: #FEFDFE;
+    }
+    .btn-holder .md-button {
+        width: 200px;
+        margin: 30px;
+    }
+    .plainWhiteTextBox{
+      background-color: #FFFFFF;
+      margin: 5px 5px 5px 5px;
+      height: auto;
+      width: 250px;
+      line-height: 50px;
+    }
+    .plainWhiteTextBoxText{
+      color: #888888;
+      font-size: 16px;
+      text-align: left;
+    }
+    .largeWhiteBox{
+      height: 200px;
+      width: 300px;
+      margin: 5px 5px 5px 5px;
+      background-color: #FFFFFF;
+    }
+    .smallGreenBox{
+      height: 50px;
+      width: 250px;
+      margin: 5px 5px 5px 5px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #EDC726;
+    }
+    #circle {
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      background-color: #EDC726;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
+      line-height: 100px;
+    }
+    #circleText {
+      text-align: center;
+    }
+</style>
+
+
+
+
+  <header>
+    <acme-navbar></acme-navbar>
+  </header>
+
+  <md-content flex layout="column" class="dr-div" layout-align="center center">
+  <h1 class=".md-display-1">{{patient_data.name}}'s data</h1>
+    <div layout="row">
+      <div layout="column">
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Name: {{patient_data.name}}</h2>
+        </div>
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Gender: {{patient_data.female ? "female" : "male"}}</h2>
+        </div>
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Ethnicity: {{patient_data.ethnicity}}</h2>
+        </div>
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Weight: {{patient_data.weight}} kg</h2>
+        </div>
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Height: {{patient_data.height}} cm</h2>
+        </div>
+        <div class="plainWhiteTextBox">
+            <h2 class="plainWhiteTextBoxText">Blood type: {{patient_data.blood_type}}</h2>
+        </div>
+      </div>
+      <div layout="column">
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Drug resistance</h2>
+          <div class="smallGreenBox" ng-repeat="resistance in patient_data.drug_resistance">
+              <h2>{{resistance}}</h2>
+          </div>
+        </div>
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Survival rate</h2>
+          <div id="circle">
+              <h2 id="circleText">{{patient_data.survival_rate}}%</h2>
+          </div>
+        </div>
+      </div>
+      <div layout="column">
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Symptoms</h2>
+          <div class="smallGreenBox" ng-repeat="symptom in patient_data.symptoms">
+              <h2>{{symptom}}</h2>
+          </div>
+        </div>
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Side effects</h2>
+          <div class="smallGreenBox" ng-repeat="effect in patient_data.side_effects">
+              <h2>{{effect}}</h2>
+          </div>
+        </div>
+      </div>
+      <div layout="column">
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Possible treatment</h2>
+          <div class="smallGreenBox" ng-repeat="treatment in patient_data.possible_treatment">
+              <h2>{{treatment}}</h2>
+          </div>
+        </div>
+        <div class="largeWhiteBox">
+          <h2 class="plainWhiteTextBoxText">Mutation data</h2>
+          <div class="smallGreenBox">Gene: {{patient_data.mutation_data.gene}}</div>
+          <div class="smallGreenBox">Position: {{patient_data.mutation_data.position}}</div>
+          <div class="smallGreenBox">Type: {{patient_data.mutation_data.type_of_mutation}}</div>
+        </div>
+      </div>
+    </div>
+  </md-content>

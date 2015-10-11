@@ -6,9 +6,9 @@
     .controller('DrPatientsController', DrPatientsController);
 
   /** @ngInject */
-  function DrPatientsController($timeout, $scope, $location, webDevTec, toastr, patientsService) {
+  function DrPatientsController($timeout, $scope, $location, webDevTec, toastr, drService) {
     var vm = this;
-    $scope.patients = patientsService;
+    $scope.patients = drService;
     $scope.go = function ( path ) {
         $location.path(path);
     }

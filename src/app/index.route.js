@@ -32,6 +32,21 @@
           controller: 'DrPatientsController',
           controllerAs: 'drpatients'
       })
+      .when('/patient/', {
+        templateUrl: 'app/patient-main/patient-main.html',
+        controller: 'DrPatientsController',
+        controllerAs: 'patient'
+      })
+      .when('/patient-upload/', {
+        templateUrl: 'app/patient-upload/patient-upload.html',
+        controller: 'PatientUploadController',
+        controllerAs: 'patientupload'
+      })
+      .when('/patient-viewdata/', {
+        templateUrl: 'app/patient-viewdata/patient-viewdata.html',
+        controller: 'PatientViewDataController',
+        controllerAs: 'patientviewdata'
+      })
       .otherwise({
         redirectTo: '/'
       });

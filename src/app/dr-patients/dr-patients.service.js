@@ -3,7 +3,7 @@
 
   angular
     .module('opencancerWeb')
-    .factory('patientsService', function($http) {
+    .factory('drService', function($http) {
         // function body
         var patients = [{name: "Arushi", female: true, cancer: "Left eye cancer"},
                     {name: "Gabi", female: false, cancer: "Pancreas cancer"},
