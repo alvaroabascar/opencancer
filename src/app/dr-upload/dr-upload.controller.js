@@ -193,12 +193,30 @@
   "Wilms Tumor"]
 
   /** @ngInject */
-  function DrUploadController($scope, $location) {
+  function DrUploadController($scope, $location, $mdDialog) {
     var vm = this;
     $scope.cancer_types = cancers;
     $scope.go = function ( path ) {
         $location.path(path);
     }
+
+    $scope.showAlert = function(ev) {
+
+      $mdDialog.show(
+        $mdDialog.alert()
+          .parent(angular.element(document.querySelector('#popupContainer')))
+          .clickOutsideToClose(true)
+          .title('Upload your Genomic data')
+          .content('You can upload your file in here.')
+          .ariaLabel('Alert Dialog Demo')
+          .ok('Done')
+          .targetEvent(ev)
+      );
+    };
+
+
+
+
   }
 
 
