@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('opencancerWeb', ['chart.js', 'ngRoute', 'mdThemingProvider'])
+    .module('opencancerWeb')
     .controller('PatientViewDataController', PatientViewDataController);
 
   /** @ngInject */
