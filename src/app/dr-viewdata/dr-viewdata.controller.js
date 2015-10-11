@@ -7,8 +7,12 @@
 
 
   /** @ngInject */
-  function DrViewDataController($scope, drDataService) {
+  function DrViewDataController($scope, $location, drDataService) {
     var vm = this;
     $scope.patient_data = drDataService;
+    $scope.go = function ( path ) {
+        console.log(path);
+        $location.path( path );
+    };
   }
 })();

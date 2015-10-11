@@ -8,6 +8,11 @@
   function routeConfig($routeProvider) {
     $routeProvider
       .when('/', {
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'home'
+      })
+      .when('/login/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
@@ -31,6 +36,11 @@
           templateUrl: 'app/dr-patients/dr-patients.html',
           controller: 'DrPatientsController',
           controllerAs: 'drpatients'
+      })
+      .when('/dr-treatment/', {
+        templateUrl: 'app/dr-treatment/dr-treatment.html',
+        controller: 'DrTreatmentController',
+        controllerAs: 'treatctrl'
       })
       .when('/patient/', {
         templateUrl: 'app/patient-main/patient-main.html',
